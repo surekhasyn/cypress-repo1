@@ -1,17 +1,18 @@
 name: first_demo
-on:[push]
+on: [push]
 jobs:
   first_demo_jobs:
-    name: The first demo job
-    steps:
-      - name: Show thr demo running
-        env:
-          VAR!: This is
-          VAR@: A Demo of
-          VAR3: Github Actions
-          VAR4: workflow jobs
-          run:
-            echo $VAR1 $VAR2 $VAR3 $VAR4.
+   name: The first demo job
+   runs-on: ubuntu-20.04
+   steps:
+    - name: Show thr demo running
+      env:
+       VAR!: This is
+       VAR@: A Demo of
+       VAR3: Github Actions
+       VAR4: workflow jobs
+      run: |
+       echo $VAR1 $VAR2 $VAR3 $VAR4.
              
 
              
